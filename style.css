@@ -1,0 +1,138 @@
+html {
+    min-height: 100%;
+}
+.card {
+    background:linear-gradient(
+         rgba(96, 110, 91, 0.779),
+         #4b99a7);
+    width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    border: 2px solid rgb(0, 0, 0);
+transition: 0.2s;
+ animation: floatCard 3s ease-in-out infinite;
+}
+
+body{
+    background: linear-gradient(
+        to bottom ,
+        #2ab365,
+        #5ca482
+
+    );
+    background-size: 100% 100%;
+    animation: gradientMove 2s ease infinite;
+    
+
+}
+
+button {
+  padding: 44px 44px;
+  background-color: rgba(130, 150, 103, 0.957);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
+}
+button:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 9px 0 #a6cfbc;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    animation: muter 2s ease-in-out infinite;
+}
+
+#partyIcon {
+    width: 100px;
+    animation: partyBounce 1.5s ease-in-out infinite;
+}
+
+/* animasi */
+@keyframes partyBounce {
+    0%, 100% {
+        transform: rotate(-11deg) scale(1);
+    }
+    50% {
+        transform: rotate(11deg) scale(1.12);
+    }
+}
+@keyframes muter {
+    0%, 100% {
+        transform: rotate(-360deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(1.12);
+    }
+}
+
+@keyframes gradientMove {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+@keyframes floatCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.video-container video {
+    max-width: 100%;
+}
+
+
+.video-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.video-popup[hidden] {
+    display: none;
+}
+
+.popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+}
+
+.popup-content video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    background: black;
+}
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: -45px;
+    padding: 8px 14px;
+    color: white;
+    background: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
